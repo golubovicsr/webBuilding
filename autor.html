@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autor | WebBuilding</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ========== NAVIGACIJA ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Web<span>Building</span></a>
+        
+        <ul class="nav-menu" id="navMenu">
+            <!-- Dinamički popunjeno iz JS -->
+        </ul>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- ========== AUTOR SEKCIJA ========== -->
+<section class="author-page">
+    <div class="container">
+        <div class="author-card">
+            <div class="author-img">
+                <img src="assets/images/autor.jpg" alt="Autor" class="rounded"/>
+            </div>
+            
+            <h1>Sreten Golubović</h1>
+            <p class="author-index">Broj indeksa: 125/23</p>
+            
+            <div class="author-divider"></div>
+            
+            <div class="author-section">
+                <h3><i class="fas fa-user"></i> O meni</h3>
+                <p>Student sam Informacionih tehnologija na Visokoj ICT školi. </p>
+            </div>
+            
+            <div class="author-section">
+                <h3><i class="fas fa-code"></i> Tehnologije</h3>
+                <ul class="tech-list">
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (Native)</li>
+                    <li>Bootstrap 5</li>
+                </ul>
+            </div>
+            
+            <div class="author-section">
+                <h3><i class="fas fa-paint-brush"></i> Template</h3>
+                <p>Template je preuzet sa: 
+                   <a href="https://html5up.net/hyperspace" target="_blank">html5up.net/hyperspace</a>
+                </p>
+            </div>
+            
+            <div class="author-section">
+                <h3><i class="fas fa-file-pdf"></i> Dokumentacija</h3>
+                <a href="dokumentacija.pdf" class="btn btn-small btn-primary" target="_blank">
+                    <i class="fas fa-download"></i> Preuzmi PDF
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 WebBuilding | Autor: Sreten Golubović</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== BACK TO TOP ========== -->
+<a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+<!-- ========== MAIN JS ========== -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

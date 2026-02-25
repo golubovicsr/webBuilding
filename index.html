@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>WebBuildinig | Profesionalna izrada web sajtova</title>
+    <meta name="description" content="WebBuilding - Profesionalna izrada web sajtova i aplikacija. Moderni, responzivni i SEO optimizovani sajtovi."/>
+    <meta name="keywords" content="izrada sajtova, web development, web dizajn, hosting, Beograd"/>
+    <meta name="author" content="Vaše Ime"/>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
+</head>
+<body>
+<div class="preloader">
+    <div class="spinner"></div>
+</div>
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Web<span>Building</span></a>
+        
+        <ul class="nav-menu" id="navMenu">
+            <!-- Dinamički JS -->
+        </ul>
+        
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+<header class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Kreiramo <span class="highlight">web sajtove</span> koji rade za vas</h1>
+            <p>Profesionalna izrada veb sajtova, online prodavnica i custom aplikacija. Moderni dizajn, vrhunske performanse.</p>
+            <div class="hero-btns">
+                <a href="#kontakt" class="btn btn-primary">Započnimo priču</a>
+                <a href="#usluge" class="btn btn-outline">Naše usluge</a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
+        </svg>
+    </div>
+</header>
+
+<section class="services" id="usluge">
+    <div class="container">
+        <div class="section-header">
+            <h2>Naše <span class="highlight">usluge</span></h2>
+            <p>Filtrirajte usluge po kategoriji i pronađite idealno rešenje za vaš biznis.</p>
+        </div>
+        
+        <div class="filter-box">
+            <label for="filterKategorija"><i class="fas fa-filter"></i> Filtriraj:</label>
+            <select id="filterKategorija" class="filter-select">
+                <option value="">Sve kategorije</option>
+            </select>
+        </div>
+        
+        <div class="services-grid" id="servicesGrid">
+            <!-- Dinamički JS -->
+        </div>
+        
+        <div class="text-center">
+            <button id="loadMoreBtn" class="btn btn-secondary">Prikaži još usluga <i class="fas fa-arrow-down"></i></button>
+        </div>
+    </div>
+</section>
+
+<section class="about-sections" id="oNama">
+    <div class="container" id="aboutContainer">
+        <!-- Dinamički JS -->
+    </div>
+</section>
+
+<section class="timer-section">
+    <div class="container">
+        <div class="timer-box">
+            <h2 id="timerNaslov"></h2>
+            <div class="timer" id="timer"></div>
+            <p>Iskoristite 30% popusta za sve nove klijente!</p>
+            <a href="#kontakt" class="btn btn-light">Zakažite konsultaciju</a>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="kontakt">
+    <div class="container">
+        <div class="section-header">
+            <h2>Kontaktirajte <span class="highlight">nas</span></h2>
+            <p>Popunite formu i javićemo vam se u najkraćem roku.</p>
+        </div>
+        
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Adresa</h4>
+                        <p>Bulevar Zorana Đinđića 12, Beograd</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Telefon</h4>
+                        <p>+381 65 123 4567</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@webforge.rs</p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Ime i prezime *</label>
+                    <input type="text" id="name" name="name">
+                    <div class="error" id="nameError"></div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email">
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Telefon</label>
+                        <input type="text" id="phone" name="phone">
+                        <div class="error" id="phoneError"></div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Vrsta projekta *</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="projekat" value="sajt"> Web sajt</label>
+                        <label><input type="radio" name="projekat" value="prodavnica"> Online prodavnica</label>
+                        <label><input type="radio" name="projekat" value="aplikacija"> Web aplikacija</label>
+                    </div>
+                    <div class="error" id="radioError"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Poruka *</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                    <div class="error" id="messageError"></div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-full">Pošalji poruku <i class="fas fa-paper-plane"></i></button>
+                <div class="success" id="formSuccess"></div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="index.html">Web<span>Building</span></a>
+                <p>Kreiramo digitalna rešenja koja pokreću vaš biznis.</p>
+            </div>
+            
+            <ul class="footer-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="dokumentacija.pdf" target="_blank">Dokumentacija</a></li>
+                <li><a href="sajt.zip" download>Preuzmi projekat (ZIP)</a></li>
+                <li><a href="robots.txt" target="_blank">robots.txt</a></li>
+                <li><a href="sitemap.xml" target="_blank">sitemap.xml</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 WebBuilding. Dizajn: <a href="https://html5up.net" target="_blank">HTML5 UP</a> (modifikovano)</p>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top"><i class="fas fa-chevron-up"></i></a>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
