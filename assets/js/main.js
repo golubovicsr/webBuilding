@@ -230,7 +230,7 @@ const aboutContainer = document.getElementById('aboutContainer');
 const aboutSections = [
     {
         title: 'Naša misija',
-        text: 'WebForge je osnovan sa ciljem da pomognemo malim i srednjim preduzećima da ostvare svoj digitalni potencijal. Verujemo da svaki biznis zaslužuje kvalitetno web prisustvo.',
+        text: 'WebBuilding je osnovan sa ciljem da pomognemo malim i srednjim preduzećima da ostvare svoj digitalni potencijal. Verujemo da svaki biznis zaslužuje kvalitetno web prisustvo.',
         image: 'assets/images/about1.jpg',
         style: 'style1'
     },
@@ -423,4 +423,5 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             }
         }
     });
+
 });
