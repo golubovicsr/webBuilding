@@ -1,4 +1,4 @@
-// ===== PRELOADER =====
+
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
     if (preloader) {
@@ -9,7 +9,6 @@ window.addEventListener('load', () => {
     }
 });
 
-// ===== NAVIGACIJA =====
 const navMenu = document.getElementById('navMenu');
 const hamburger = document.querySelector('.hamburger');
 const navbar = document.getElementById('navbar');
@@ -52,7 +51,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== BACK TO TOP =====
 const backToTop = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
@@ -70,7 +68,6 @@ if (backToTop) {
     });
 }
 
-// ===== SERVISI =====
 const services = [
     {
         id: 1,
@@ -133,7 +130,6 @@ const filterSelect = document.getElementById('filterKategorija');
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 
 if (servicesGrid) {
-    // Popunjavanje filtera
     const categories = [...new Set(services.map(s => s.category))];
     categories.forEach(cat => {
         const option = document.createElement('option');
@@ -150,8 +146,7 @@ if (servicesGrid) {
         option.textContent = catName;
         filterSelect.appendChild(option);
     });
-    
-    // State
+ 
     let currentIndex = 0;
     let filteredServices = [...services];
     const itemsPerPage = 3;
@@ -196,19 +191,15 @@ if (servicesGrid) {
             }
         }
     }
-    
-    // Inicijalni prikaz
     displayServices();
     
-    // Load more
+   
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', (e) => {
             e.preventDefault();
             displayServices();
         });
     }
-    
-    // Filter
     if (filterSelect) {
         filterSelect.addEventListener('change', () => {
             const selected = filterSelect.value;
@@ -224,13 +215,12 @@ if (servicesGrid) {
     }
 }
 
-// ===== O NAMA SEKCIJE =====
 const aboutContainer = document.getElementById('aboutContainer');
 
 const aboutSections = [
     {
         title: 'Naša misija',
-        text: 'WebBuilding je osnovan sa ciljem da pomognemo malim i srednjim preduzećima da ostvare svoj digitalni potencijal. Verujemo da svaki biznis zaslužuje kvalitetno web prisustvo.',
+        text: 'WebForge je osnovan sa ciljem da pomognemo malim i srednjim preduzećima da ostvare svoj digitalni potencijal. Verujemo da svaki biznis zaslužuje kvalitetno web prisustvo.',
         image: 'assets/images/about1.jpg',
         style: 'style1'
     },
@@ -277,12 +267,10 @@ if (aboutContainer) {
     });
 }
 
-// ===== TAJMER =====
 const timerNaslov = document.getElementById('timerNaslov');
 const timerDisplay = document.getElementById('timer');
 
 if (timerDisplay) {
-    // Postavi datum za 15 dana od danas
     const endDate = new Date();
     endDate.setDate(endDate.getDate() + 15);
     endDate.setHours(23, 59, 59, 999);
@@ -327,8 +315,6 @@ if (timerDisplay) {
     updateTimer();
     setInterval(updateTimer, 1000);
 }
-
-// ===== FORMA VALIDACIJA =====
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
@@ -345,7 +331,6 @@ if (contactForm) {
     const messageError = document.getElementById('messageError');
     const formSuccess = document.getElementById('formSuccess');
     
-    // Regex
     const nameRegex = /^[A-Za-zČčĆćŠšĐđŽž\s]{3,50}$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const phoneRegex = /^[+]?[\d\s-]{8,20}$/;
@@ -355,32 +340,22 @@ if (contactForm) {
         e.preventDefault();
         
         let isValid = true;
-        
-        // Reset
         [nameError, emailError, phoneError, radioError, messageError].forEach(el => {
             if (el) el.textContent = '';
         });
         if (formSuccess) formSuccess.textContent = '';
-        
-        // Ime
         if (!nameRegex.test(nameInput.value.trim())) {
             nameError.textContent = 'Ime mora imati 3-50 karaktera (samo slova)';
             isValid = false;
         }
-        
-        // Email
         if (!emailRegex.test(emailInput.value.trim())) {
             emailError.textContent = 'Unesite validnu email adresu';
             isValid = false;
         }
-        
-        // Telefon (opciono)
         if (phoneInput.value.trim() !== '' && !phoneRegex.test(phoneInput.value.trim())) {
             phoneError.textContent = 'Telefon nije validan';
             isValid = false;
         }
-        
-        // Radio
         let radioSelected = false;
         radioInputs.forEach(radio => {
             if (radio.checked) radioSelected = true;
@@ -390,8 +365,6 @@ if (contactForm) {
             radioError.textContent = 'Izaberite vrstu projekta';
             isValid = false;
         }
-        
-        // Poruka
         if (!messageRegex.test(messageInput.value.trim())) {
             messageError.textContent = 'Poruka mora imati najmanje 10 karaktera';
             isValid = false;
@@ -400,16 +373,12 @@ if (contactForm) {
         if (isValid) {
             formSuccess.textContent = 'Poruka je uspešno poslata! Javićemo vam se.';
             contactForm.reset();
-            
-            // Console log za proveru
             console.log('Forma validna! Podaci:');
             console.log('Ime:', nameInput.value);
             console.log('Email:', emailInput.value);
         }
     });
 }
-
-// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         const href = this.getAttribute('href');
@@ -423,5 +392,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             }
         }
     });
-
 });
